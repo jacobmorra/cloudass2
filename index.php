@@ -91,6 +91,7 @@ $image = $vision->image($familyPhotoResource, ['FACE_DETECTION']);
 echo "hahahaha3";
 $result = $vision->annotate($image);
 
+echo "hahahaha4";
 if($result){
 	echo "YEAH BITCH";
 }
