@@ -90,6 +90,11 @@ $image = $vision->image($familyPhotoResource, ['FACE_DETECTION']);
 
 echo "hahahaha3";
 $result = $vision->annotate($image);
+
+if($result){
+	echo "YEAH BITCH";
+}
+
 /*
 # the name of the image file to annotate
 $fileName = 'test/data/wakeupcat.jpg';
