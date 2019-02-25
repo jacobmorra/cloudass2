@@ -8,13 +8,13 @@ use Google\Cloud\Vision\VisionClient;
 
 $vision = new VisionClient(['keyFile' => json_decode(file_get_contents("cloudviskey.json"),true)]);
 
-$familyPhotoResource = fopen('https://www.photonottingham.co.uk/wp-content/uploads/2018/07/photonottingham-family-contemporary-square.jpg', 'r') or die('FUCK KEVIN');
+$familyPhotoResource = fopen('fampic.jpg', 'r');
 
 $image = $vision->image($familyPhotoResource, ['FACE_DETECTION', 'WEB_DETECTION']);
 
-echo $image;
+$result = $vision->annotate($image);
 
-#$result = $vision->annotate($image);
+var_dump($result);
 
 echo "hahahaha4";
 
