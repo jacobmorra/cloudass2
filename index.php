@@ -21,6 +21,6 @@ if($result){
 	echo "YEAH BITCH";
 }
 */
-*/
+
 
 ?>
