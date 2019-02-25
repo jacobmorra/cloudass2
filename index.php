@@ -1,26 +1,6 @@
 <?php
 
-# includes the autoloader for libraries installed with composer
-require __DIR__ . '/vendor/autoload.php';
-
-# imports the Google Cloud client library
-use Google\Cloud\Vision\V1\ImageAnnotatorClient;
-
-# instantiates a client
-$imageAnnotator = new ImageAnnotatorClient(['keyFile' => json_decode(file_get_contents("cloudviskey.json"),true)]);
-
-# the name of the image file to annotate
-$fileName = 'test/data/wakeupcat.jpg';
-
-echo "yo";
-
-# prepare the image to be annotated
-$image = file_get_contents($fileName);
-
-# performs label detection on the image file
-$response = $imageAnnotator->labelDetection($image);
-
-/*session_start();
+session_start();
 
 require "vendor/autoload.php";
 
