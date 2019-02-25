@@ -12,7 +12,7 @@ $familyPhotoResource = fopen('https://www.photonottingham.co.uk/wp-content/uploa
 
 $image = $vision->image($familyPhotoResource, ['FACE_DETECTION', 'WEB_DETECTION']);
 
-$result = $vision->annotate($image);
+#$result = $vision->annotate($image);
 
 echo "hahahaha4";
 
