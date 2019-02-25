@@ -91,6 +91,7 @@ $image = $vision->image($familyPhotoResource, [
     'FACE_DETECTION'
 ]);
 
+echo "hahahaha3";
 $result = $vision->annotate($image);
 /*
 # the name of the image file to annotate
