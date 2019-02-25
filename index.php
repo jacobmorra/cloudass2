@@ -47,8 +47,7 @@ $client->messages->create(
 */
 
 #PART 3 - USE GOOGLE MAPS API TO GET LOCATION
-?>
-
+/*
 <!--
 <div id="googleMap" style="width:100%;height:400px;"></div>
 
@@ -66,7 +65,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 -->
 
 <!-- PART 4 - USE GOOGLE VISION TO CLASSIFY PICS-->
-<?php
+*/
 # includes the autoloader for libraries installed with composer
 #require __DIR__ . '/vendor/autoload.php';
 
