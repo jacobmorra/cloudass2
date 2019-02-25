@@ -80,10 +80,12 @@ use Google\Cloud\Vision\VisionClient;
 
 $vision = new VisionClient();
 
-echo "hahaha";
+echo "hahaha1";
 
-$familyPhotoResource = fopen('fampic.jpg', 'r') or die('FUCK KEVIN');
+$familyPhotoResource = fopen('https://www.photonottingham.co.uk/wp-content/uploads/2018/07/photonottingham-family-contemporary-square.jpg', 'r') or die('FUCK KEVIN');
 fclose($familyPhotoResource);
+
+echo "hahahah2";
 
 $image = $vision->image($familyPhotoResource, [
     'FACE_DETECTION'
