@@ -68,7 +68,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 <!-- PART 4 - USE GOOGLE VISION TO CLASSIFY PICS-->
 <?php
 # includes the autoloader for libraries installed with composer
-require __DIR__ . '/vendor/autoload.php';
+#require __DIR__ . '/vendor/autoload.php';
 
 # imports the Google Cloud client library
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
