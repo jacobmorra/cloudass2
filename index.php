@@ -14,11 +14,11 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 
 
 /*Conn to MySQL*/
-#$conn = mysql_connect(
-#"us-cdbr-iron-east-03.cleardb.net",
-#"b50feca8c93502",
-#"e1c23b30")
-#or die(mysql_error($conn));
+$conn = mysql_connect(
+"us-cdbr-iron-east-03.cleardb.net",
+"b50feca8c93502",
+"e1c23b30")
+or die(mysql_error($conn));
 
 echo "YOYOYO";
 
