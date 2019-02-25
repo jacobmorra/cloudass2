@@ -70,9 +70,9 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 #require __DIR__ . '/vendor/autoload.php';
 
 # imports the Google Cloud client library
-echo "hahaha";
-use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+echo "hahaha";
 # instantiates a client
 $imageAnnotator = new ImageAnnotatorClient();
 
