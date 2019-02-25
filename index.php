@@ -81,6 +81,14 @@ use Google\Cloud\Vision\VisionClient;
 $vision = new VisionClient();
 
 echo "hahaha";
+
+$familyPhotoResource = fopen(__DIR__ . '/fampic.jpg', 'r');
+
+$image = $vision->image($familyPhotoResource, [
+    'FACE_DETECTION'
+]);
+
+$result = $vision->annotate($image);
 /*
 # the name of the image file to annotate
 $fileName = 'test/data/wakeupcat.jpg';
