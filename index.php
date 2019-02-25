@@ -4,6 +4,7 @@ session_start();
 
 require "vendor/autoload.php";
 
+/*
 use Google\Cloud\Vision\VisionClient;
 
 $vision = new VisionClient(['keyFile' => json_decode(file_get_contents("cloudviskey.json"),true)]);
@@ -20,4 +21,5 @@ if($result){
 	echo "YEAH BITCH";
 }
 
+*/
 ?>
