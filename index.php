@@ -74,7 +74,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 echo "hahaha";
 # instantiates a client
-$imageAnnotator = new ImageAnnotatorClient();
+$imageAnnotator = new vision.ImageAnnotatorClient();
 
 echo "hahaha";
 /*
