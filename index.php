@@ -72,9 +72,13 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 # imports the Google Cloud client library
 
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
-echo "hahaha";
+use Googel\Cloud\Vision\VisionClient;
+
+#echo "hahaha";
 # instantiates a client
-$imageAnnotator = new vision.ImageAnnotatorClient();
+#$imageAnnotator = new vision.ImageAnnotatorClient();
+
+$vision = new VisionClient();
 
 echo "hahaha";
 /*
