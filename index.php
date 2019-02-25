@@ -12,14 +12,15 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
 <?php
 
-/*Conn to MySQL*/
-$conn = mysql_connect(
-"us-cdbr-iron-east-03.cleardb.net",
-"b50feca8c93502",
-"e1c23b30")
-or die(mysql_error($conn));
 
-print "YOYOYO";
+/*Conn to MySQL*/
+#$conn = mysql_connect(
+#"us-cdbr-iron-east-03.cleardb.net",
+#"b50feca8c93502",
+#"e1c23b30")
+#or die(mysql_error($conn));
+
+echo "YOYOYO";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
     // FIXME: add more validation, e.g. using ext/fileinfo
