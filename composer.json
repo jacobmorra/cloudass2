@@ -1,6 +1,7 @@
 {
     "require": {
         "aws/aws-sdk-php": "~2.6",
-        "twilio/sdk": "^5.28"
+        "twilio/sdk": "^5.28",
+        "google/cloud-vision": "^0.19.2"
     }
 }
