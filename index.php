@@ -78,7 +78,7 @@ use Google\Cloud\Vision\VisionClient;
 # instantiates a client
 #$imageAnnotator = new vision.ImageAnnotatorClient();
 
-$vision = new VisionClient();
+$vision = new VisionClient(['keyFile' => json_decode(file_get_contents("cloudviskey.json"),true)]);
 
 echo "hahaha1";
 
@@ -87,9 +87,7 @@ fclose($familyPhotoResource);
 
 echo "hahahah2";
 
-$image = $vision->image($familyPhotoResource, [
-    'FACE_DETECTION'
-]);
+$image = $vision->image($familyPhotoResource, ['FACE_DETECTION']);
 
 echo "hahahaha3";
 $result = $vision->annotate($image);
