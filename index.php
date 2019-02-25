@@ -76,6 +76,8 @@ use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 # instantiates a client
 $imageAnnotator = new ImageAnnotatorClient();
 
+echo "hahaha";
+/*
 # the name of the image file to annotate
 $fileName = 'test/data/wakeupcat.jpg';
 
@@ -94,6 +96,7 @@ if ($labels) {
 } else {
     echo('No label found' . PHP_EOL);
 }
+*/
 ?>
 
 
