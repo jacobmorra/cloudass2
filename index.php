@@ -83,7 +83,6 @@ $vision = new VisionClient(['keyFile' => json_decode(file_get_contents("cloudvis
 echo "hahaha1";
 
 $familyPhotoResource = fopen('https://www.photonottingham.co.uk/wp-content/uploads/2018/07/photonottingham-family-contemporary-square.jpg', 'r') or die('FUCK KEVIN');
-fclose($familyPhotoResource);
 
 echo "hahahah2";
 
