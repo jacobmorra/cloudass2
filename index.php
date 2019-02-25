@@ -12,7 +12,8 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
 <?php
 
-/*Conn to MySQL*/
+/*
+#PART 1 - CONN TO DB - TESTED AND WORKS
 $conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
 
 $sql = "INSERT INTO emails(emails) VALUES('test@test.ca')";
@@ -24,6 +25,25 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+*/
+
+#PART 2 - TEXT MESSAGES
+require_once "vendor/autoload.php"; 
+use Twilio\Rest\Client;
+
+$account_sid = "AC42a738d7e606d6e74a1142967ec4df1a";
+$auth_token = "a22ee4895ae1981f65d87a3f029bf7c9";
+$twilio_phone_number = "2892744712";
+
+$client = new Client($account_sid, $auth_token);
+
+$client->messages->create(
+    '2894040725',
+    array(
+        "from" => '2892744712',
+        "body" => "Whaddup from PHP!"
+    )
+);
 
 echo "YOYOYO";
 
