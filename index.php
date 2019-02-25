@@ -82,7 +82,8 @@ $vision = new VisionClient();
 
 echo "hahaha";
 
-$familyPhotoResource = fopen(__DIR__ . '/fampic.jpg', 'r');
+$familyPhotoResource = fopen('fampic.jpg', 'r') or die('FUCK KEVIN');
+fclose($familyPhotoResource);
 
 $image = $vision->image($familyPhotoResource, [
     'FACE_DETECTION'
