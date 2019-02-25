@@ -12,13 +12,8 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
 <?php
 
-
 /*Conn to MySQL*/
-$conn = mysql_connect(
-"us-cdbr-iron-east-03.cleardb.net",
-"b50feca8c93502",
-"e1c23b30")
-or die(mysql_error($conn));
+$mysqli = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
 
 echo "YOYOYO";
 
