@@ -12,8 +12,8 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
 <?php
 
-/*
 #PART 1 - CONN TO DB - TESTED AND WORKS
+/*
 $conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
 
 $sql = "INSERT INTO emails(emails) VALUES('test@test.ca')";
@@ -27,8 +27,8 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 */
 
-#PART 2 - TEXT MESSAGES
-require_once "vendor/autoload.php"; 
+#PART 2 - TEXT MESSAGES - TESTED AND WORKS
+/*require_once "vendor/autoload.php"; 
 use Twilio\Rest\Client;
 
 $account_sid = "AC42a738d7e606d6e74a1142967ec4df1a";
@@ -44,7 +44,26 @@ $client->messages->create(
         "body" => "Whaddup from PHP!"
     )
 );
+*/
 
+#PART 3 - USE GOOGLE MAPS API TO GET LOCATION
+?>
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+
+<?php
 echo "YOYOYO";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
