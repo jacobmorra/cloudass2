@@ -90,6 +90,7 @@ $client->messages->create(
 				line-height: 30px;
 				padding-left: 10px;
 			  }
+
 		</style>
 	</head>
 	<body>
@@ -149,7 +150,10 @@ $client->messages->create(
 			</div>
 		</div>
 		<div class="container">
-			<img src="fampic.jpg" alt="Italian Trulli">
+		</div>
+
+		<div class="container">			
+			<img src="fampic.jpg" height="600 px">
 		</div>
 	</body>
 </html>

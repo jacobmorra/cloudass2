@@ -1,4 +1,7 @@
 <?php
+
+require('vendor/autoload.php');
+
 /* 
 Jacob Morra, 100395426
 
@@ -6,14 +9,12 @@ This file is my opening page for my application. A user types their address and 
 
 */
 
-require('vendor/autoload.php');
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	  <title>Bootstrap Example</title>
+	  <title>Come Find Me</title>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -27,7 +28,7 @@ require('vendor/autoload.php');
 		<div class="container">
 			<div class="row">
 				<form action="script.php" method="post">
-				Address: <input type="text" name="address" id="address"><br>
+				Where Are You? <input type="text" name="address" id="address"><br>
 				<input type="submit">
 				</form>	
 			</div>
