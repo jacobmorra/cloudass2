@@ -159,5 +159,36 @@ $client->messages->create(
 			Photo of me: <br>
 			<img src="fampic.jpg" height="600 px">
 		</div>
+
+		<div class="container">
+		<br>
+		<br>		
+		</div>
+
+		<div class="container">
+		
+<?php
+require 'vendor/autoload.php';
+
+use Google\Cloud\Vision\VisionClient;
+
+// Authenticating with keyfile data.
+$vision = new VisionClient([
+    'keyFile' => json_decode(file_get_contents('key.json'), true)
+]);
+
+// Authenticating with a keyfile path.
+$vision = new VisionClient([
+    'keyFilePath' => 'key.json'
+]);
+
+// Providing the Google Cloud project ID.
+$vision = new VisionClient([
+    'projectId' => 'cloudass2-1551081154281'
+]);
+
+		
+?>		
+		</div>
 	</body>
 </html>
