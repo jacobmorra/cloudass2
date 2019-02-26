@@ -25,7 +25,7 @@ $sql = "INSERT INTO addresses(addresses) VALUES('$address')";
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    //echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
@@ -79,7 +79,7 @@ $client->messages->create(
 			  }
 			  #floating-panel {
 				position: absolute;
-				top: 100px;
+				top: 250px;
 				left: 25%;
 				z-index: 5;
 				background-color: #fff;
