@@ -1,5 +1,4 @@
 <?php
-/*
 require('vendor/autoload.php');
 
 #PART 1 - CONN TO DB - TESTED AND WORKS
@@ -17,7 +16,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-*/
 
 #PART 2 - TEXT MESSAGES - TESTED AND WORKS
 require_once "vendor/autoload.php"; 
@@ -35,7 +33,7 @@ $client->messages->create(
     '2894040725',
     array(
         "from" => '+13658000322',
-        "body" => 'yo'
+        "body" => $address
     )
 );
 ?>
