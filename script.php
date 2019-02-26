@@ -77,7 +77,7 @@ $client->messages->create(
   </head>
   <body>
     <form>
-    <input type="text" name="address" id="address" value=<?php $_POST["address"]?> ><br>
+    <input type="text" name="address" id="address" value= "99 Holliday Drive, ON"><br>
     </form>
     <div id="map"></div>
     <script>
