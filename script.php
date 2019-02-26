@@ -5,8 +5,7 @@ require('vendor/autoload.php');
 /* 
 Jacob Morra, 100395426
 
-This file is my script page for my application. Given the input address from index.php, the user has to find me using my location via Google Maps API and a Photo. I will receive a text of the user's location using the Twilio API.
-
+This file is my script page for my application. Given the input address from index.php, the user has to find me using my location via Google Maps API and a Photo. I will receive a text of the user's location using the Twilio API. The address is also stored on a ClearDB MySQL database.
 */
 
 
@@ -168,6 +167,8 @@ $client->messages->create(
 		<div class="container">
 		
 <?php
+#PART 4 - Google Vision API - worked, but does not execute at time of demo due to unknown error 
+
 require 'vendor/autoload.php';
 
 use Google\Auth\CredentialsLoader;
@@ -193,23 +194,17 @@ $vision = new VisionClient([
     'projectId' => 'cloudass2-1551081154281'
 ]);
 
-echo "test1";
-
 $images = [];
 
-echo "test2";
-
 $picRes = fopen(__DIR__ . 'fampic.jpg', 'r');
-
-echo "test3";
 
 $images[] = $vision->image($picRes, [
     'FACE_DETECTION'
 ]);
 
-echo "test4";
 $result = $vision->annotateBatch($images);
 		
+var_dump($result);
 ?>		
 		</div>
 	</body>
