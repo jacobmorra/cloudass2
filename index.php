@@ -17,10 +17,6 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		Address: <input type="text" name="address" id="address"><br>
 		<input type="submit">
 		</form>		
-		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
-
-
-
 
 <?php
 /*
