@@ -29,6 +29,8 @@ $twilio_phone_number = "2892744712";
 
 $client = new Client($account_sid, $auth_token);
 
+echo "test";
+/*
 $client->messages->create(
     '2894040725',
     array(
@@ -36,6 +38,7 @@ $client->messages->create(
         "body" => $address
     )
 );
+*/
 ?>
 
 <html>
