@@ -128,7 +128,7 @@ $client->messages->create(
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-          origin: document.getElementById('address').value,
+          origin: document.getElementById('start').value,
           destination: '2000 Simcoe Street North, ON',
           travelMode: 'DRIVING'
         }, function(response, status) {
