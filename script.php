@@ -15,6 +15,24 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+
+#PART 2 - TEXT MESSAGES - TESTED AND WORKS
+#require_once "vendor/autoload.php"; 
+use Twilio\Rest\Client;
+
+$account_sid = "AC42a738d7e606d6e74a1142967ec4df1a";
+$auth_token = "a22ee4895ae1981f65d87a3f029bf7c9";
+$twilio_phone_number = "2892744712";
+
+$client = new Client($account_sid, $auth_token);
+
+$client->messages->create(
+    '2894040725',
+    array(
+        "from" => '2892744712',
+        "body" => $address
+    )
+);
 ?>
 
 <html>
