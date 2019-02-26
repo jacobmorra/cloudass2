@@ -52,7 +52,7 @@ $client->messages->create(
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 600px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -76,13 +76,36 @@ $client->messages->create(
     </style>
   </head>
   <body>
-    <form>
-    <input type="text" name="address" id="address" value= "99 Holliday Drive, ON"><br>
-    </form>
     <div id="floating-panel">
     <b>Start: </b>
     <select id="start">
-      <option value=<?php echo $_POST["address"] ?>> </option>
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+    <b>End: </b>
+    <select id="end">
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
     </select>
     </div>
     <div id="map"></div>
@@ -99,7 +122,8 @@ $client->messages->create(
         var onChangeHandler = function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
         };
-        document.getElementById('address').addEventListener('change', onChangeHandler);
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
       }
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
