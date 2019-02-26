@@ -170,7 +170,13 @@ $client->messages->create(
 <?php
 require 'vendor/autoload.php';
 
+use Google\Auth\CredentialsLoader;
+
+$credentials = CredentialsLoader::makeCredentials($scope, json_decode(getenv('keyFile'),true));
+
 use Google\Cloud\Vision\VisionClient;
+
+$my_env_var = getenv('GOOGLE_APPLICATION_CREDENTIALS');
 
 // Authenticating with keyfile data.
 $vision = new VisionClient([
