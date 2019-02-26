@@ -195,6 +195,7 @@ $images[] = $vision->image($picRes, [
     'FACE_DETECTION'
 ]);
 
+echo "test";
 $result = $vision->annotateBatch($images);
 		
 ?>		
