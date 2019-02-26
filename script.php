@@ -30,6 +30,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
+/*
 #PART 2 - TEXT MESSAGES - TESTED AND WORKS
 require_once "vendor/autoload.php"; 
 use Twilio\Rest\Client;
@@ -49,47 +50,54 @@ $client->messages->create(
         "body" => $address
     )
 );
+*/
 ?>
 
 
 <!DOCTYPE html>
-<html>
-<!--PART 3 - USE GOOGLE MAPS API TO GET LOCATION - TESTED WORKS-->
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Directions Service</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 600px;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-    </style>
-  </head>
-  <body>
-<h1>Come Find Me</h1>
-<hr>
-    <div id="floating-panel">
+<html lang="en">
+<head>
+	<title>Come Find Me</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		  /* Always set the map height explicitly to define the size of the div
+		   * element that contains the map. */
+		  #map {
+		    height: 600px;
+		  }
+		  /* Optional: Makes the sample page fill the window. */
+		  html, body {
+		    height: 100%;
+		    margin: 0;
+		    padding: 0;
+		  }
+		  #floating-panel {
+		    position: absolute;
+		    top: 10px;
+		    left: 25%;
+		    z-index: 5;
+		    background-color: #fff;
+		    padding: 5px;
+		    border: 1px solid #999;
+		    text-align: center;
+		    font-family: 'Roboto','sans-serif';
+		    line-height: 30px;
+		    padding-left: 10px;
+		  }
+	</style>
+</head>
+<body>
+<div class="jumbotron text-center">
+	  <h1>Come Find Me</h1> 
+</div>
+<div class="container">
+		<div class="row">
+<div id="floating-panel">
     <b>Start: </b>
     <select id="start">
       <option value=""></option>
@@ -135,5 +143,23 @@ $client->messages->create(
 	<script async defer 
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCTyb4-Pduzn2umNzIUER9joB5EZdHoEs&callback=initMap">
 	</script>
+
+		</div>
+</div>
+    
   </body>
+
+<body>
+	<div class="jumbotron text-center">
+	  <h1>Come Find Me</h1> 
+	</div>
+	<div class="container">
+		<div class="row">
+			<form action="script.php" method="post">
+			Address: <input type="text" name="address" id="address"><br>
+			<input type="submit">
+			</form>	
+		</div>
+	</div>
+</body>
 </html>
