@@ -141,7 +141,7 @@ $client->messages->create(
       }
     </script>
 	<script async defer 
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCTyb4-Pduzn2umNzIUER9joB5EZdHoEs&callback=myMap">
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCTyb4-Pduzn2umNzIUER9joB5EZdHoEs&callback=initMap">
 	</script>
   </body>
 </html>
