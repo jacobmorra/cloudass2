@@ -1,5 +1,20 @@
 <?php
+require('vendor/autoload.php');
+#PART 1 - CONN TO DB - TESTED AND WORKS
 
+$conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
+
+$address = $_POST["address"];
+
+$sql = "INSERT INTO addresses(addresses) VALUES('$address')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>
 
 <html>
