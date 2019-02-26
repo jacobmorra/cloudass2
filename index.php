@@ -22,7 +22,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 
 $conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
 
-$sql = "INSERT INTO emails(emails) VALUES('test@test.ca')";
+$sql = "INSERT INTO emails(emails) VALUES('test2@test.ca')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
