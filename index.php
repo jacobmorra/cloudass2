@@ -13,6 +13,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
     <head><meta charset="UTF-8"></head>
     <body>
         <h1>Come Find Me</h1>
+<hr>
 		<form action="script.php" method="post">
 		Address: <input type="text" name="address" id="address"><br>
 		<input type="submit">

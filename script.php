@@ -78,6 +78,7 @@ $client->messages->create(
   </head>
   <body>
 <h1>Come Find Me</h1>
+<hr>
     <div id="floating-panel">
     <b>Start: </b>
     <select id="start">
