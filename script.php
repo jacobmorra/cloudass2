@@ -111,6 +111,7 @@ $client->messages->create(
 					<option value="2000 Simcoe Street North, ON">2000 Simcoe Street North, ON</option>
 					</select>
 			</div>
+			Directions to me: <br>
 			<div id="map"></div>
 				<script>
 				  function initMap() {
@@ -150,9 +151,12 @@ $client->messages->create(
 			</div>
 		</div>
 		<div class="container">
+		<br>
+		<br>		
 		</div>
 
 		<div class="container">			
+			Photo of me: <br>
 			<img src="fampic.jpg" height="600 px">
 		</div>
 	</body>
