@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0d9fa7bdfd9d3ce3fe6db0e6bb041a8",
+    "content-hash": "fc73fa8f977b2e3694a66f094cf835e3",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1127,16 +1127,16 @@
         },
         {
             "name": "twilio/sdk",
-            "version": "5.28.1",
+            "version": "5.29.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twilio/twilio-php.git",
-                "reference": "d12afc8f14022b032a2f90f878534c63adc90e6c"
+                "reference": "44ebd9724004554d849de1e21d622c4d33355685"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/d12afc8f14022b032a2f90f878534c63adc90e6c",
-                "reference": "d12afc8f14022b032a2f90f878534c63adc90e6c",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/44ebd9724004554d849de1e21d622c4d33355685",
+                "reference": "44ebd9724004554d849de1e21d622c4d33355685",
                 "shasum": ""
             },
             "require": {
@@ -1169,7 +1169,7 @@
                 "sms",
                 "twilio"
             ],
-            "time": "2019-01-12T01:01:52+00:00"
+            "time": "2019-02-20T16:59:00+00:00"
         }
     ],
     "packages-dev": [],

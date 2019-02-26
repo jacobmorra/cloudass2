@@ -23,9 +23,9 @@ $conn->close();
 require_once "vendor/autoload.php"; 
 use Twilio\Rest\Client;
 
-$account_sid = "AC42a738d7e606d6e74a1142967ec4df1a";
-$auth_token = "a22ee4895ae1981f65d87a3f029bf7c9";
-$twilio_phone_number = "2892744712";
+$account_sid = "AC5b4c9c99886a25e1761cfa33a8c05a6f";
+$auth_token = "a484e3051393f77b58391ac3eac0c39f";
+$twilio_phone_number = "+13658000322";
 
 $client = new Client($account_sid, $auth_token);
 
@@ -34,7 +34,7 @@ echo "test";
 $client->messages->create(
     '2894040725',
     array(
-        "from" => '2892744712',
+        "from" => '+13658000322',
         "body" => 'yo'
     )
 );
