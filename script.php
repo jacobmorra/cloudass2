@@ -30,7 +30,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-/*
+
 #PART 2 - TEXT MESSAGES - TESTED AND WORKS
 require_once "vendor/autoload.php"; 
 use Twilio\Rest\Client;
@@ -50,7 +50,7 @@ $client->messages->create(
         "body" => $address
     )
 );
-*/
+
 ?>
 
 
