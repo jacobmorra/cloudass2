@@ -1,13 +1,26 @@
 <?php
+
 require('vendor/autoload.php');
 
-#PART 1 - CONN TO DB - TESTED AND WORKS
+/* 
+Jacob Morra, 100395426
 
+This file is my script page for my application. Given the input address from index.php, the user has to find me using my location via Google Maps API and a Photo. I will receive a text of the user's location using the Twilio API.
+
+*/
+
+
+#PART 1 - CONNECT TO DATABASE - TESTED AND WORKS
+
+#initialize new connection
 $conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
 
+#set address from index.php
 $address = $_POST["address"];
 
+#insert address into database
 $sql = "INSERT INTO addresses(addresses) VALUES('$address')";
+
 
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
@@ -17,19 +30,18 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-/*
 #PART 2 - TEXT MESSAGES - TESTED AND WORKS
 require_once "vendor/autoload.php"; 
 use Twilio\Rest\Client;
 
+#authentication details
 $account_sid = "AC5b4c9c99886a25e1761cfa33a8c05a6f";
 $auth_token = "a484e3051393f77b58391ac3eac0c39f";
 $twilio_phone_number = "+13658000322";
 
 $client = new Client($account_sid, $auth_token);
 
-echo "test";
-
+#send a SMS message to phone
 $client->messages->create(
     '2894040725',
     array(
@@ -37,8 +49,6 @@ $client->messages->create(
         "body" => $address
     )
 );
-
-*/
 ?>
 
 
