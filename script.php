@@ -187,15 +187,21 @@ $vision = new VisionClient([
     'projectId' => 'cloudass2-1551081154281'
 ]);
 
+echo "test1";
+
 $images = [];
 
+echo "test2";
+
 $picRes = fopen(__DIR__ . 'fampic.jpg', 'r');
+
+echo "test3";
 
 $images[] = $vision->image($picRes, [
     'FACE_DETECTION'
 ]);
 
-echo "test";
+echo "test4";
 $result = $vision->annotateBatch($images);
 		
 ?>		
