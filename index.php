@@ -1,16 +1,22 @@
 <?php
 require('vendor/autoload.php');
-
 // this will simply read AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY from env vars
 $s3 = Aws\S3\S3Client::factory();
 $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
 ?>
 
+
+
+
+
 <html>
     <head><meta charset="UTF-8"></head>
     <body>
-        <h1>Hello SOFE4630</h1>
-		
+        <h1>Come Find Me</h1>
+		<form action="script.php" method="post">
+		Address: <input type="text" name="address"><br>
+		<input type="submit">
+		</form>		
 		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
 
 
@@ -22,7 +28,9 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 
 $conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
 
-$sql = "INSERT INTO emails(emails) VALUES('test2@test.ca')";
+$email = "1 Frost Drive";
+
+$sql = "INSERT INTO emails(emails) VALUES($email)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
