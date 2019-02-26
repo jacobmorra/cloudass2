@@ -1,5 +1,7 @@
 <?php
+/*
 require('vendor/autoload.php');
+
 #PART 1 - CONN TO DB - TESTED AND WORKS
 
 $conn = new mysqli("us-cdbr-iron-east-03.cleardb.net", "b50feca8c93502", "e1c23b30", "heroku_9bc6fe309529a63");
@@ -15,9 +17,10 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+*/
 
 #PART 2 - TEXT MESSAGES - TESTED AND WORKS
-#require_once "vendor/autoload.php"; 
+require_once "vendor/autoload.php"; 
 use Twilio\Rest\Client;
 
 $account_sid = "AC42a738d7e606d6e74a1142967ec4df1a";
